@@ -1,0 +1,203 @@
+/* ____________________________Kopf der Seite_________________________________ */
+h1 {
+	text-align: center;
+	text-decoration: underline;
+}
+
+#wähleSchwierigkeit, #placeShipDiv, #spielfeld, #munition, #scorerboard, #multiplayer, #result, #options {
+	display: none;
+}
+
+#introduction {
+	text-align: center;
+	font-size: 18px;
+}
+/* ____________________________Button Single / Multi_________________________________ */
+#startmenü {
+	list-style-type: none;
+	text-align:center;
+}
+
+#startmenü > li {
+	display: inline-block;
+}
+/* _________________________Schwierigkeiten_________________________________ */
+#wähleSchwierigkeit > h3{
+	text-align:center;
+}
+
+#schwierigkeit {
+	text-align: center;
+	list-style-type: none;
+}
+
+#schwierigkeit > li {
+	display: inline-block;
+}
+
+#leicht, #mittel, #schwer {
+	border: 1px solid black;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#leicht > p, #mittel > p, #schwer > p {
+	margin: 5px;
+	font-size:20px;
+}
+
+.options:hover {background-color: cadetblue;}
+#leicht, #mittel, #schwer {
+	transition: all 0.5s linear;
+	cursor: pointer;
+}
+
+#labelOption {
+	text-align:center;
+	font-weight: bold;
+}
+/* _________________________Spielfeld_________________________________ */
+#matchfieldPlayerLI > h3, #matchfieldKILI > h3 {
+	text-align:center;
+	text-decoration: underline;
+}
+
+#spielfeldbereich {
+	text-align: center;
+	list-style-type: none;
+}
+
+#spielfeldbereich > li {
+	display: inline-block;
+}
+
+#matchfieldPlayerLI, #matchfieldKILI {
+	width: 25%;
+}
+/* _________________________Schiffe setzen_________________________________ */
+#placeShip > h3 {
+	text-align:center;
+	text-decoration: underline;
+}
+
+#placeShip {
+	list-style-type: none;
+	text-align: center;
+}
+
+#placeShip > li {
+	display: inline-block;
+}
+/* _________________________Schiffklassen und Interaktion mit dem Spielfeld_________________________________ */
+rect.nichts {
+  fill: #FFFFFF;
+  stroke: #000000;
+  pointer-events: all;
+}
+
+rect.keinTreffer {
+  fill: #FF0000;
+  stroke: #000000;
+  pointer-events: all;
+}
+
+rect.treffer {
+  fill: #7CFC00;
+  stroke: #000000;
+  pointer-events: all;
+}
+
+rect.trefferVersenkt {
+  fill: #7CFC00;
+  stroke: #FF00FF;
+  pointer-events: all;
+}
+
+rect.Aufklärer {
+  fill: #FF1493;
+  stroke: #000000;
+  pointer-events: all;
+}
+
+rect.Kreuzer {
+  fill: #00BFBF;
+  stroke: #000000;
+  pointer-events: all;
+}
+
+rect.Fregatte {
+  fill: #FFFF00;
+  stroke: #000000;
+  pointer-events: all;
+}
+
+rect.Zerstörer {
+  fill: #FF7F00;
+  stroke: #000000;
+  pointer-events: all;
+}
+
+rect.Schlachtschiff {
+  fill: #8A2BE2;
+  stroke: #000000;
+  pointer-events: all;
+}
+
+rect.schiffSetzen {
+	fill: #A4A4A4;
+	stroke: #000000;
+}
+/* _________________________Scorerboard / Result_________________________________ */
+#result, #scorerboard {
+	text-align: center;
+	font-size: 20px;
+}
+
+#Spielausgang {
+	font-size: 28px;
+}
+
+#hinweis {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+#Spieltext {
+	font-size: 26px;
+}
+/* _________________________Options_________________________________ */
+#options {
+	text-align:center;
+}
+
+#optionButton {
+	cursor: pointer;
+}
+
+/* _________________________Munition_________________________________ */
+#muni {
+	text-align: center;
+	list-style-type: none;
+}
+
+#muni > li {
+	display: inline-block;
+}
+
+#ap, #he {
+	border: 1px solid black;
+	margin-left: 5px;
+	margin-right: 5px;
+	cursor: pointer;
+}
+
+#ap > p, #he > p {
+	margin: 5px;
+	font-size:20px;
+}
+/* _________________________Wer is an der Reihe_________________________________ */
+#hinweisSpieler {
+	text-align: center;
+	font-size: 26px;
+	font-weight: bold;
+}

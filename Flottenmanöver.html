@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Flottenmanöver</title>
+	<link rel="stylesheet" href="Flottenmanöver.css">
+	<link rel="stylesheet" href="Menueleiste.css">
+	<link rel="stylesheet" href="Buttons.css">
+</head>
+<body>
+	<ul id="kopfleiste">
+		<li><a href="Flottenmanöver.html">Zurück</a></li>
+		<li><a id="optionButton">Optionen</a></li>
+	</ul>
+	<br>
+	<h1>Flottenmanöver</h1>
+	<!-- Div(1) -->
+	<div id="introduction">
+		<h2>Herzlich Willkommen Admiral</h2>
+		<h3>Wählen Sie zwischen einem Einzelgefecht gegen eine KI oder gegen einen feindlichen Spieler</h3>		
+		<ul id="startmenü">
+			<li>
+				<button type="button" id="singleplayerbutton">Singleplayer</button>
+			</li>
+			<li>
+				<button type="button" id="multiplayerbutton">Multiplayer</button>	
+			</li>
+		</ul>
+	</div>
+	<!-- Div(2) -->
+	<div id="wähleSchwierigkeit">
+		<h3>Bitte wählen Sie Ihr Schwierigkeitslevel:</h3>
+		<ul id="schwierigkeit">
+			<li>
+				<div class="options" id="leicht">
+					<p id="labelOption">Leicht</p>
+					<p>Anzahl Schiffe: 1</p>
+					<p>Kartengröße: 5x5</p>
+				</div>
+			</li>
+			<li>
+				<div class="options" id="mittel">
+					<p id="labelOption">Mittel</p>
+					<p>Anzahl Schiffe: 2</p>
+					<p>Kartengröße: 10x10</p>
+				</div>
+			</li>
+			<li>
+				<div class="options" id="schwer">
+					<p id="labelOption">Schwer</p>
+					<p>Anzahl Schiffe: 5</p>
+					<p>Kartengröße: 15x15</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- Div(3) -->
+	<div id="placeShipDiv">
+		<ul id="placeShip">
+			<h3>Setzen Sie Ihre Schiffe:</h3>
+			<li>
+				<button id="schifflänge1">Aufklärer</button>
+			</li>
+			<li>
+				<button id="schifflänge2">Kreuzer</button>
+			</li>
+			<li>
+				<button id="schifflänge3">Fregatte</button>
+			</li>
+			<li>
+				<button id="schifflänge4">Zerstörer</button>
+			</li>
+			<li>
+				<button id="schifflänge5">Schlachtschiff</button>
+			</li>
+		</ul>
+	</div>
+	<!-- Div(4) -->
+	<div id="spielfeld">
+		<ul id="spielfeldbereich">
+			<li id="matchfieldPlayerLI">
+				<h3 id = "Label1">Spielfeld: Spieler</h3>
+				<div id="matchfieldPlayer">
+				</div>
+			</li>
+			<li id="matchfieldKILI" style="display:none;">
+				<h3 id = "Label2">Spielfeld: KI</h3>
+				<div id="matchfieldKI">
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- Div(5) -->
+	<div id="munition">
+		<ul id="muni">
+			<li>
+				<div class="options" id="ap">
+					<p id="labelOption">AP Munition</p>
+					<p>Explosionsradius: 1x1</p>
+					<p>Anzahl: unendlich</p>
+				</div>
+			</li>
+			<li>
+				<div class="options" id="he">
+					<p id="labelOption">HE Munition</p>
+					<p>Explosionsradius: 3x3</p>
+					<p id="countHe">Anzahl: 1</p>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- Div(6) -->
+	<div id="hinweisSpieler">
+		<span id="anderReihe">Spieler 1: Sie sind dran!</span><br>
+	</div>
+	<!-- Div(7) -->
+	<div id="scorerboard">
+		<span id="hinweis">Scorerboard:</span><br>
+		<span id="AnzahlSchüsse"></span></br>
+		<span id="AnzahlTreffer"></span></br>
+		<span id="AnzahlZerstörteSchiffe"></span></br>
+		<span id="Spieldauer">Spieldauer: <b>0</b> Sekunden</span>
+	</div>
+	<!-- Div(8) -->
+	<div id="result">
+		<span id="Spielausgang"></span><br> <!-- Gewonnen oder verloren -->
+		<span id="Spieltext"></span><br><br> <!-- ... Commander. Alle unsere Schiffe ... -->
+		<span id="Ergebnistext"></span><br> <!-- ... Schusse ... -->
+		<span id="Trefferquote"></span><br> <!-- Trefferquote... -->
+		<span id="ÜbrigeSchiffe"></span> <!-- ... manövrierfähige Schiffe ... -->
+		<br><br>
+		<button type="button" id="restart" href="Singleplayer.html">Neues Spiel starten</button>
+	</div>
+	<!-- Div(9) -->
+	<div id="optionMusic" class="popup">
+	<!-- Als Pop-Up darstellen -->
+		<div class="popuptext">
+			<p>Hintergrund-Musik</p>
+			<button id="musicBtn" type="button">
+				<img id="music_on" src="sound-on.png"></img>
+				<img id="music_off" src="sound-off.png" style="display: none;"></img>
+			</button>
+			<p>Sound Schuss</p>
+			<button id="volume_shoot" type="button">
+				<img id="sound_on" src="sound-on.png" />
+				<img id="sound_off" src="sound-off.png" style="display: none;"/>
+			</button>
+		</div>
+	</div>
+	<button type="button" id="startgame">Spiel starten</button>
+	<button type="button" id="music"></button>
+	<!-- Einbinden Sourcen -->
+	<audio src="Flug.mp3" id="audioFlug">Ihr Browser unterstützt noch kein HTML5 Audio. Bitte Google Chrome downloaden.</audio>
+	<audio src="Treffer.mp3" id="audioTreffer">Ihr Browser unterstützt noch kein HTML5 Audio. Bitte Google Chrome downloaden.</audio>
+	<audio src="keinTreffer.mp3" id="audioKeinTreffer">Ihr Browser unterstützt noch kein HTML5 Audio. Bitte Google Chrome downloaden.</audio>
+	<audio src="Background.mp3" id="audioBackground">Ihr Browser unterstützt noch kein HTML5 Audio. Bitte Google Chrome downloaden.</audio>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	<script src="Flottenmanöver.js"></script>
+</body>
+</html>
